@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+/* Fontes:
+Playfair Display - títulos e cabeçalhos
+Merriweather - corpo do texto
+*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --cor0:#c0e5e9;
+    --cor1:#0BCADB;
+    --cor2:#099EAD;
+    --cor3:#031058;
+    --cor4:#1a5c37;
+    --cor5:#355B5F;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Playfair Display', serif;
+    --fonte-corpo: 'Merriweather', serif;
+
+}
+
+body{
+    font-family: var(--fonte-padrao);
+    background-color: var(--cor0);
+
+}
+
+/*quando não passamos que é filho ">" quer dizer que é para todas as tags que estão dentro da primeira
+ou seja, neste caso a configuração vai pegar todas as tags p dentro da main não importando o nível
+*/
+main p{
+    margin: 15px 0px; /*configurando as margens que foram retiradas no início*/
+    text-align: justify;
+    text-indent: 30px; /*identação do primeiro parágrafo*/
+    line-height: 2em; /*altura entre linhas*; neste caso 1em não há espaço*/
+    font-size: 1em;
+}
+
+header{
+    background-image: linear-gradient(to bottom, var(--cor0), var(--cor3));
+    min-height: 150px; /*altura mínima do cabeçalho*/
+    text-align: center;
+    padding-top: 40px;
+}
+
+header > p{
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    max-width: 600px;
+    padding-right: 10px; 
+    padding-left: 10px;
+    margin: auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.349);
+}
+
+header > h1{
+color: white;
+font-family: var(--fonte-destaque);
+font-size: 3em;
+margin-bottom: 20px;
+text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.281);
+}
+
+nav{
+background-color: var(--cor3);
+padding: 10px;
+box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.356);
+}
+
+nav > a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 30px;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    /*colocando um tempo para transição da animação quando passar o mouse por cima*/
+    transition-duration: .25s;
+}
+
+nav > a:hover{
+    background-color: var(--cor0);
+    color: var(--cor3);
+}
+
+main{
+background-color: white;
+min-width: 300px;
+max-width: 1000px;
+padding: 20px;
+margin: auto;
+margin-bottom: 30px; /*para não ficar colado no rodapé*/
+/*Acrescentando arredondamento das bordas*/
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.479);
+/*arredondando apenas a parte de baixo da main*/
+border-bottom-left-radius: 10px; 
+border-bottom-right-radius: 10px;
+}
+
+main h1{
+    color:var(--cor5);
+    font-family: var(--fonte-destaque);
+    background-image: linear-gradient(to right, var(--cor1), transparent); 
+}
+
+main h2{
+    font-family: var(--fonte-destaque);
+    color: var(--cor4);
+    font-size: 1.2em;
+    background-image: linear-gradient(to right, var(--cor1), transparent); 
+    text-indent: 8px;
+}
+
+main h3{
+    font-family: var(--fonte-destaque);
+    color: var(--cor4);
+    font-size: 1.1em;
+    background-image: linear-gradient(to right, var(--cor1), transparent); 
+    text-indent: 8px;
+}
+
+main img{
+    width: 100%;
+}
+
+main strong{
+    color: var(--cor2);
+    font-weight: bold;
+}
+
+main ol{
+    margin-left: 30px;
+}
+
+aside#lista{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.295);
+    margin-bottom: 20px;
+}
+
+aside#lista > ul{
+    list-style-type: '\2714\00A0\00A0'; /*00A0 é código para espaço*/
+    /*colocando as "bolinhas" dentro da box aside*/
+    list-style-position: inside;
+    columns: 2; /*dividindo a lista em duas colunas*/
+}
+
+aside#imagem{
+    columns: 2;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+aside > ul{
+    list-style-type: none; /*00A0 é código para espaço*/
+    /*colocando as "bolinhas" dentro da box aside*/
+    list-style-position: inside;
+    columns: 2; /*dividindo a lista em duas colunas*/
+    text-align: center;
+}
+
+footer{
+background-color: var(--cor3);
+color: white;
+text-align: center;
+font-size: 0.8em;
+padding: 5px;
+}
+
+footer a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor1);
+}
+
+.outro{
+    color: black;
+}
+
+img{
+width: auto;
+height: auto
+}
